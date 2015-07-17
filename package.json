@@ -1,0 +1,14 @@
+{
+  "name": "rnRedux",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "react-native": "git+ssh://git@github.com:alinz/react-native.git#0.6-stable-es6",
+    "react-redux": "^0.2.2",
+    "redux": "^1.0.0-rc",
+    "redux-thunk": "^0.1.0"
+  }
+}
