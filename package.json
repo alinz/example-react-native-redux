@@ -6,9 +6,9 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
-    "react-native": "git+ssh://git@github.com:alinz/react-native.git#0.6-stable-es6",
-    "react-redux": "^0.2.2",
-    "redux": "^1.0.0-rc",
-    "redux-thunk": "^0.1.0"
+    "react-native": "git+ssh://git@github.com:alinz/react-native.git#v0.10.1-stable-redux",
+    "react-redux": "2.1.1",
+    "redux": "2.0.0",
+    "redux-thunk": "0.1.0"
   }
 }
