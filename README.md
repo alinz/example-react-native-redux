@@ -1,32 +1,39 @@
-# React Native 0.10.1 and Redux 2.0.0 Example
+## Example Project using React-Native 0.16 and Redux 3.0.4
 
-Redux is amazing and combine it with React-Native makes the whole experience more enjoyable. ** However ** there is one tiny thing you have to do. You have to fork react-native and apply 2 patches.
+This is a repo for starting a react-native app using Redux.
 
-First `Babel` in React_Native needs to be patched in order for us to use some features such as `Decorator` and `module`. In order to do that you have to [patch](https://github.com/alinz/react-native/commit/4182e64b4a94639e828c1792fcd41dbd4dae8118) `packager/packager.js`. This patch lets babel reads configuration from `.babelrc` file.
+There are some issues which it needs to be addressed:
+ - React-Native >= 0.16 use Babel 6 which doesn't support `Decorator` until until T2645 lands in Babel. So for binding your `connect` use the old style.
 
-Second, This patch is optional but highly recommended, lets you use `import` with multiple line. As an example,
 
-instead of this,
-
-```js
-import React, { Component, View, Text, ScrollView } from 'react-native'
-```
-
-you can do this with this patch:
+instead of this:
 
 ```js
-import React, {
-  Component,
-  View,
-  Text,
-  ScrollView
-} from 'react-native'
+@connect(state => ({
+  state: state.counter
+}))
+class CounterApp extends Component {
+
+}
+
+export CounterApp;
 ```
 
-which makes it alot easer to read.
+use this:
 
-So for doing that, you have to [patch](https://github.com/alinz/react-native/commit/17900b71dad37b290b8416a238d60de3319c8591) `packager/react-packager/src/DependencyResolver/replacePatterns.js` import regular expression to include enter char.
+```js
+class CounterApp extends Component {
 
-I have already using my [fork](https://github.com/alinz/react-native/tree/v0.10.1-stable-redux) in production which includes latest stable react-native 0.10 with these two patches. In this example, I have used my fork.
+}
 
-Enjoy and happy reducing :P
+export default connect(state => ({
+  state: state.counter
+}))(CounterApp);
+```
+
+ - Babel 6 doesn't like old .babelrc and you need to clean all .babelrc in your `node_modules`. I have provided a simple `bash script` to clean all `.bashrc` files.
+
+ once you install packages using `npm install`, make sure to run `npm run clean` to remove all `.bashrc` inside `node_modules`.
+
+
+Cheers,
