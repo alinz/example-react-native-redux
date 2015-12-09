@@ -2,8 +2,8 @@
 
 This is a repo for starting a react-native app using Redux.
 
-There are some issues which it needs to be addressed:
- - React-Native >= 0.16 use Babel 6 which doesn't support `Decorator` until until T2645 lands in Babel. So for binding your `connect` use the old style.
+There are some issues which they need to be addressed in the future:
+ - React-Native >= 0.16 use Babel 6 which doesn't support `Decorator` until T2645 lands in Babel. So for binding your `connect` use the old style.
 
 
 instead of this:
