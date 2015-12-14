@@ -31,7 +31,7 @@ export default connect(state => ({
 }))(CounterApp);
 ```
 
- - Babel 6 doesn't like old .babelrc and you need to clean all .babelrc in your `node_modules`. I have provided a simple `bash script` to clean all `.bashrc` files.
+ - Babel 6 doesn't like old .babelrc and you need to clean all .babelrc in your `node_modules`. I have provided a simple `bash script` to clean all `.babelrc` files.
 
  once you install packages using `npm install`, make sure to run `npm run clean` to remove all `.babelrc` inside `node_modules`.
 
