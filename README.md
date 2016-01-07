@@ -1,39 +1,11 @@
-## Example Project using React-Native 0.16 and Redux 3.0.4
+## Example Project using React-Native 0.18.-rc and Redux 3.0.4 and React-Redux 4.0.5
 
 This is a repo for starting a react-native app using Redux.
 
-There are some issues which they need to be addressed in the future:
- - React-Native >= 0.16 use Babel 6 which doesn't support `Decorator` until T2645 lands in Babel. So for binding your `connect` use the old style.
+### Usage
 
+clone the project and run `npm install`.
 
-instead of this:
-
-```js
-@connect(state => ({
-  state: state.counter
-}))
-class CounterApp extends Component {
-
-}
-
-export CounterApp;
-```
-
-use this:
-
-```js
-class CounterApp extends Component {
-
-}
-
-export default connect(state => ({
-  state: state.counter
-}))(CounterApp);
-```
-
- - Babel 6 doesn't like old .babelrc and you need to clean all .babelrc in your `node_modules`. I have provided a simple `bash script` to clean all `.babelrc` files.
-
- once you install packages using `npm install`, make sure to run `npm run clean` to remove all `.babelrc` inside `node_modules`.
-
+I have to do couple of cleanup after `npm install` you can follow up on this [react-redux issue](https://github.com/rackt/react-redux/issues/236)
 
 Cheers,

@@ -4,7 +4,7 @@ import React, { Component } from 'react-native';
 import {bindActionCreators} from 'redux';
 import Counter from '../components/counter';
 import * as counterActions from '../actions/counterActions';
-import { connect } from 'react-redux/native';
+import { connect } from 'react-redux';
 
 // @connect(state => ({
 //   state: state.counter

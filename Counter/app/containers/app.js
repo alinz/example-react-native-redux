@@ -1,6 +1,6 @@
 import React, { Component } from 'react-native';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { Provider } from 'react-redux/native';
+import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import * as reducers from '../reducers';
@@ -14,7 +14,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        {() => <CounterApp />}
+        <CounterApp />
       </Provider>
     );
   }
