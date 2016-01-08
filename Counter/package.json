@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "postinstall": "npm run step1; npm run step2",
+    "setup_project": "npm run step1; npm run step2",
     "step1": "rm -rf node_modules/react-native/node_modules/react; rm -rf node_modules/react-native/node_modules/fbjs; rm -rf node_modules/react/node_modules/fbjs",
     "step2": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
   },

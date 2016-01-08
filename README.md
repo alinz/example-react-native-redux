@@ -1,11 +1,17 @@
-## Example Project using React-Native 0.18.-rc and Redux 3.0.4 and React-Redux 4.0.5
+## Counter Example
 
-This is a repo for starting a react-native app using Redux.
+#### React-Native 0.18.0-rc & Redux 3.0.4 & React-Redux 4.0.5
+
+This repo demonstrates the usage of latest React-Native with Redux.
 
 ### Usage
 
-clone the project and run `npm install`.
+- clone the project
+- run `npm install`
+- if you are using npm version 2 then you need to run the following command, npm@3 won't need this command. to follow up why you need to run this command you can look at this [issue](https://github.com/rackt/react-redux/issues/236)
 
-I have to do couple of cleanup after `npm install` you can follow up on this [react-redux issue](https://github.com/rackt/react-redux/issues/236)
+```js
+npm run setup_project
+```
 
 Cheers,
