@@ -15,16 +15,19 @@ class CounterApp extends Component {
   }
 
   render() {
-    const { state, dispatch } = this.props;
-
+    const { state, actions } = this.props;
     return (
       <Counter
         counter={state.count}
-        {...bindActionCreators(counterActions, dispatch)} />
+        {...actions} />
     );
   }
 }
 
 export default connect(state => ({
-  state: state.counter
-}))(CounterApp);
+    state: state.counter
+  }),
+  (dispatch) => ({
+    actions: bindActionCreators(counterActions, dispatch)
+  })
+)(CounterApp);
