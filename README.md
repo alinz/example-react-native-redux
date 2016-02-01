@@ -1,6 +1,6 @@
 ## Counter Example
 
-#### React-Native 0.18.0-rc & Redux 3.0.4 & React-Redux 4.0.5
+#### React-Native 0.19.0 & Redux 3.1.7 & React-Redux 4.1.2
 
 This repo demonstrates the usage of latest React-Native with Redux.
 
@@ -13,5 +13,7 @@ This repo demonstrates the usage of latest React-Native with Redux.
 ```js
 npm run setup_project
 ```
+
+> NOTE: You don't need to run the above command if you are using npm3.
 
 Cheers,
