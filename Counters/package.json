@@ -9,6 +9,8 @@
     "react": "0.14.8",
     "react-native": "0.23.1",
     "react-redux": "4.4.2",
-    "redux": "3.4.0"
+    "redux": "3.4.0",
+    "redux-actions": "^0.9.1",
+    "redux-thunk": "^2.0.1"
   }
 }
