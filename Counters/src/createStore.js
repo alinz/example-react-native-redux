@@ -7,6 +7,7 @@ const middleware = applyMiddleware(thunk);
 
 export default (data = {}) => {
   const rootReducer = combineReducers({
+    //every modules reducer should be define here
     [app.NAME]: app.reducer
   })
 

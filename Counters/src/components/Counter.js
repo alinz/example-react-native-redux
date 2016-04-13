@@ -16,13 +16,14 @@ const styles = StyleSheet.create({
 })
 
 const Counter = (props) => {
-  const { decrementFn, children, incrementFn } = props
+  const { decrementFn, children, incrementFn, incrementWithDelayFn } = props
 
   return (
     <View style={styles.container}>
       <Button onClick={decrementFn}>-</Button>
       <Text style={styles.label}>{children}</Text>
       <Button onClick={incrementFn}>+</Button>
+      <Button onClick={incrementWithDelayFn}>+ with delay</Button>
     </View>
   )
 }
@@ -30,7 +31,8 @@ const Counter = (props) => {
 Counter.propTypes = {
   decrementFn: React.PropTypes.func.isRequired,
   children: React.PropTypes.number.isRequired,
-  incrementFn: React.PropTypes.func.isRequired
+  incrementFn: React.PropTypes.func.isRequired,
+  incrementWithDelayFn: React.PropTypes.func.isRequired
 }
 
 export default Counter
