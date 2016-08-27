@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
+import Button from './button';
 
 const styles = StyleSheet.create({
-  button: {
-    width: 100,
-    height: 30,
-    padding: 10,
-    backgroundColor: 'lightgray',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 3
-  }
+    counter:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 });
 
 export default class Counter extends Component {
@@ -22,14 +19,10 @@ export default class Counter extends Component {
     const { counter, increment, decrement } = this.props;
 
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.counter}>
         <Text>{counter}</Text>
-        <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>up</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>down</Text>
-        </TouchableOpacity>
+        <Button text="Up" pressAction={increment}/>
+        <Button text="Down" pressAction={decrement}/>
       </View>
     );
   }
