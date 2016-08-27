@@ -1,7 +1,7 @@
 /**
  * Created by rotem on 25/08/2016.
  */
-import React, {Component} from 'react';
+import React, {Component , PropTypes} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -34,3 +34,8 @@ export default class Button extends Component{
      )
     }
 }
+
+//Button.propTypes = {
+//    text:PropTypes.string.isRequired,
+//    pressAction:PropTypes.func.isRequired
+//}
