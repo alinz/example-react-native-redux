@@ -13,11 +13,4 @@ describe('Counter', () => {
         ).toJSON();
         expect(tree).toMatchSnapshot();
     });
-
-    it('renders correctly with text', () => {
-        const tree = renderer.create(
-            <Button text="Up"/>
-        ).toJSON();
-        expect(tree).toMatchSnapshot();
-    });
 });
