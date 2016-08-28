@@ -7,8 +7,13 @@ exports[`Counter renders correctly 1`] = `
       "justifyContent": "center"
     }
   }>
-  <Text />
+  <Text
+    accessibilityLabel="Counter value text"
+    accessible={true}
+    testID="Counter value text" />
   <View
+    accessibilityLabel="button Up"
+    accessible={true}
     style={
       Object {
         "alignItems": "center",
@@ -19,7 +24,8 @@ exports[`Counter renders correctly 1`] = `
         "padding": 10,
         "width": 100
       }
-    }>
+    }
+    testID="button Up">
     <View
       accessibilityComponentType={undefined}
       accessibilityLabel={undefined}
@@ -45,6 +51,8 @@ exports[`Counter renders correctly 1`] = `
     </View>
   </View>
   <View
+    accessibilityLabel="button Down"
+    accessible={true}
     style={
       Object {
         "alignItems": "center",
@@ -55,7 +63,8 @@ exports[`Counter renders correctly 1`] = `
         "padding": 10,
         "width": 100
       }
-    }>
+    }
+    testID="button Down">
     <View
       accessibilityComponentType={undefined}
       accessibilityLabel={undefined}

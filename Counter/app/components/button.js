@@ -3,6 +3,7 @@
  */
 import React, {Component , PropTypes} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import testIdProps from '../utils/testIdProps';
 
 const styles = StyleSheet.create({
     button: {
@@ -23,15 +24,15 @@ export default class Button extends Component{
         super(props)
     }
 
-    render(){
+    render() {
         const { pressAction , text } = this.props;
-     return(
-         <View style={styles.button}>
-             <TouchableOpacity onPress={pressAction}>
-                 <Text>{text}</Text>
-            </TouchableOpacity>
-         </View>
-     )
+        return (
+            <View style={styles.button} {...testIdProps("button " + text)}>
+                <TouchableOpacity onPress={pressAction}>
+                    <Text>{text}</Text>
+                </TouchableOpacity>
+            </View>
+        )
     }
 }
 

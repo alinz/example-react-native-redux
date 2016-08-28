@@ -1,5 +1,7 @@
 exports[`Button renders correctly 1`] = `
 <View
+  accessibilityLabel="button undefined"
+  accessible={true}
   style={
     Object {
       "alignItems": "center",
@@ -10,7 +12,8 @@ exports[`Button renders correctly 1`] = `
       "padding": 10,
       "width": 100
     }
-  }>
+  }
+  testID="button undefined">
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
@@ -37,6 +40,8 @@ exports[`Button renders correctly 1`] = `
 
 exports[`Button renders correctly with text 1`] = `
 <View
+  accessibilityLabel="button Up"
+  accessible={true}
   style={
     Object {
       "alignItems": "center",
@@ -47,7 +52,8 @@ exports[`Button renders correctly with text 1`] = `
       "padding": 10,
       "width": 100
     }
-  }>
+  }
+  testID="button Up">
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
