@@ -3,7 +3,7 @@
  */
 import counterReducer from '../../../reducers/counter';
 import * as actionTypes from '../../../actions/actionTypes';
-import {expect,should} from 'chai';
+import { expect } from 'chai';
 
 
 const stateWith5InCount = {count : 5};

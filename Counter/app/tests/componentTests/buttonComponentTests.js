@@ -2,7 +2,7 @@
  * Created by rotem on 27/08/2016.
  */
 import React from 'react';
-import { Text } from 'react-native';
+import { Text } from 'react-native-mock';
 import { shallow } from 'enzyme';
 import Button from '../../components/button';
 import { expect } from 'chai';
