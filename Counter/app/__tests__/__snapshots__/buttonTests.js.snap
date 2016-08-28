@@ -1,0 +1,81 @@
+exports[`Button renders correctly 1`] = `
+<View
+  accessibilityLabel="button undefined"
+  accessible={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "lightgray",
+      "height": 30,
+      "justifyContent": "center",
+      "margin": 3,
+      "padding": 10,
+      "width": 100
+    }
+  }
+  testID="button undefined">
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function bound touchableHandleResponderGrant]}
+    onResponderMove={[Function bound touchableHandleResponderMove]}
+    onResponderRelease={[Function bound touchableHandleResponderRelease]}
+    onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+    onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+    onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
+    style={
+      Object {
+        "opacity": 1
+      }
+    }
+    testID={undefined}>
+    <Text />
+  </View>
+</View>
+`;
+
+exports[`Button renders correctly with text 1`] = `
+<View
+  accessibilityLabel="button Up"
+  accessible={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "lightgray",
+      "height": 30,
+      "justifyContent": "center",
+      "margin": 3,
+      "padding": 10,
+      "width": 100
+    }
+  }
+  testID="button Up">
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function bound touchableHandleResponderGrant]}
+    onResponderMove={[Function bound touchableHandleResponderMove]}
+    onResponderRelease={[Function bound touchableHandleResponderRelease]}
+    onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+    onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+    onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
+    style={
+      Object {
+        "opacity": 1
+      }
+    }
+    testID={undefined}>
+    <Text>
+      Up
+    </Text>
+  </View>
+</View>
+`;
