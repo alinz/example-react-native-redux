@@ -9,10 +9,11 @@
     "step2": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
   },
   "dependencies": {
-    "react": "^15.3.1",
-    "react-native": "^0.31.0",
-    "react-redux": "4.4.0",
-    "redux": "3.3.1",
-    "redux-thunk": "1.0.3"
+    "react": "15.3.1",
+    "react-native": "0.32.0",
+    "react-redux": "4.4.5",
+    "redux": "3.5.2",
+    "redux-actions": "0.11.0",
+    "redux-thunk": "2.1.0"
   }
 }
