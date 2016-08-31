@@ -1,4 +1,5 @@
-import React, { StyleSheet, View } from 'react-native'
+import React, { PropTypes } from 'react'
+import { StyleSheet, View } from 'react-native'
 import { connect } from 'react-redux'
 
 import { Counters, Counter } from './../../components'
@@ -51,11 +52,11 @@ App.displayName = 'App'
 //receive. This is really good for documenting and prevent you from a lot of bug during
 //development mode. Remember, all of these will be ignored once you set it to production.
 App.propTypes = {
-  addNewCounter: React.PropTypes.func.isRequired,
-  counters: React.PropTypes.object.isRequired,
-  increment: React.PropTypes.func.isRequired,
-  decrement: React.PropTypes.func.isRequired,
-  incrementWithDelay: React.PropTypes.func.isRequired
+  addNewCounter: PropTypes.func.isRequired,
+  counters: PropTypes.object.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
+  incrementWithDelay: PropTypes.func.isRequired
 }
 
 //Here's the most complex part of our app. connect is a function which selects,

@@ -1,4 +1,5 @@
-import React, { StyleSheet, View } from 'react-native'
+import React, { PropTypes } from 'react'
+import { StyleSheet, View } from 'react-native'
 
 import Counter from './Counter'
 import Button from './Button'
@@ -22,8 +23,8 @@ const Counters = (props) => {
 }
 
 Counters.propTypes = {
-  children: React.PropTypes.arrayOf(React.PropTypes.node).isRequired,
-  addFn: React.PropTypes.func.isRequired
+  children: PropTypes.arrayOf(React.PropTypes.node).isRequired,
+  addFn: PropTypes.func.isRequired
 }
 
 export default Counters

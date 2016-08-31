@@ -1,4 +1,5 @@
-import React, { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import React, { PropTypes } from 'react'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
   button: {
@@ -23,8 +24,8 @@ const Button = (props) => {
 }
 
 Button.PropTypes = {
-  children: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired
+  children: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Button

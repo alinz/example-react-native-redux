@@ -1,4 +1,5 @@
-import React, { Component } from 'react-native';
+import React from 'react'
+import { Component } from 'react-native';
 import { Provider } from 'react-redux';
 
 import { app } from './modules'
