@@ -14,4 +14,4 @@ This repo demonstrates the usage of latest React-Native with Redux.
 - go to `Counter` folder
 - run `npm install`
 
-Cheers,
+Cheers.
