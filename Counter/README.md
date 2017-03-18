@@ -1,6 +1,6 @@
 ## Counter Example
 
-#### React-Native 0.32.0 & Redux 3.5.2 & React-Redux 4.4.5
+#### React-Native 0.42.3 & Redux 3.6.0 & React-Redux 5.0.3
 
 This repo demonstrates the usage of latest React-Native with Redux.
 
