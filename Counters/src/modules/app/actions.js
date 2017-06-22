@@ -1,4 +1,15 @@
+// @flow
+
 import { INCREMENT, DECREMENT, ADD_NEW_COUNTER } from './constants'
+
+export type Action = {
+  type: string,
+  payload?: {
+    id: number
+  }
+}
+
+export type ActionAsync = (dispatch: Function, getState: Function) => void
 
 //each action should have the following signiture.
 //  {
@@ -11,7 +22,7 @@ import { INCREMENT, DECREMENT, ADD_NEW_COUNTER } from './constants'
 
 //this action tell the reducer which counter with specified id needs to be
 //incremented.
-export const increment = (id) => {
+export const increment = (id: number): Action => {
   return {
     type: INCREMENT,
     payload: {
@@ -22,7 +33,7 @@ export const increment = (id) => {
 
 //this action tell the reducer which counter with specified id needs to be
 //decremented.
-export const decrement = (id) => {
+export const decrement = (id: number): Action => {
   return {
     type: DECREMENT,
     payload: {
@@ -32,16 +43,14 @@ export const decrement = (id) => {
 }
 
 //tells the reducer, we need a new counter on the scene with a new ID
-export const newCounter = () => {
+export const newCounter = (): Action => {
   return {
     type: ADD_NEW_COUNTER
   }
 }
 
-
-export const incrementWithDelay = (id) => {
+export const incrementWithDelay = (id: number): ActionAsync => {
   return (dispatch, getState) => {
-
     //we are going to do some async call here  for example an ajax call.
     //for simplicity I will just use setTimeout.
 

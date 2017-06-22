@@ -1,8 +1,10 @@
-import React, { PropTypes } from 'react'
+// @flow
+
+import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
-import Counter from './Counter'
-import Button from './Button'
+import { Counter } from './Counter'
+import { Button } from './Button'
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +13,12 @@ const styles = StyleSheet.create({
   }
 })
 
-const Counters = (props) => {
+type CountersProps = {
+  children?: any,
+  addFn: () => void
+}
+
+export const Counters = (props: CountersProps) => {
   const { children, addFn } = props
 
   return (
@@ -21,10 +28,3 @@ const Counters = (props) => {
     </View>
   )
 }
-
-Counters.propTypes = {
-  children: PropTypes.arrayOf(React.PropTypes.node).isRequired,
-  addFn: PropTypes.func.isRequired
-}
-
-export default Counters

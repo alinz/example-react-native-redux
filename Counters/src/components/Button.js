@@ -1,5 +1,7 @@
-import React, { PropTypes } from 'react'
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+// @flow
+
+import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const styles = StyleSheet.create({
   button: {
@@ -11,21 +13,21 @@ const styles = StyleSheet.create({
 
     margin: 5
   }
-});
+})
 
-const Button = (props) => {
+type ButtonProps = {
+  children?: any,
+  onClick: () => void
+}
+
+export const Button = (props: ButtonProps) => {
   const { children, onClick } = props
 
   return (
-    <TouchableOpacity onPress={onClick} style={styles.button}>
-      <Text>{children}</Text>
-    </TouchableOpacity>
+    <View style={styles.button}>
+      <TouchableOpacity onPress={onClick} style={{ flex: 1 }}>
+        <Text>{children}</Text>
+      </TouchableOpacity>
+    </View>
   )
 }
-
-Button.PropTypes = {
-  children: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
-}
-
-export default Button

@@ -1,16 +1,17 @@
 {
-  "name": "Counters",
+  "name": "counters",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
-    "react": "15.4.2",
-    "react-native": "0.42.3",
-    "react-redux": "5.0.3",
-    "redux": "3.6.0",
-    "redux-actions": "2.0.1",
+    "flow-bin": "0.45.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.45.1",
+    "react-redux": "5.0.5",
+    "redux": "3.7.0",
+    "redux-actions": "2.0.3",
     "redux-thunk": "2.2.0"
   }
 }
