@@ -4,7 +4,7 @@
     <img src ="https://raw.githubusercontent.com/alinz/example-react-native-redux/master/Counters/demo.gif" />
 </p>
 
-#### React-Native 0.32.0 & Redux 3.5.2 & React-Redux 4.4.5
+#### React-Native 0.45.1 & Redux 3.7.0 & React-Redux 5.0.5
 
 This is a little bit more complex than my previous example, I added as many
 comments as I can so to prevent confusion. Take your time, there are a lot of
