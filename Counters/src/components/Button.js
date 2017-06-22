@@ -5,7 +5,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const styles = StyleSheet.create({
   button: {
-    height: 20,
+    height: 50,
     padding: 20,
     backgroundColor: 'lightgray',
     alignItems: 'center',
@@ -24,10 +24,10 @@ export const Button = (props: ButtonProps) => {
   const { children, onClick } = props
 
   return (
-    <View style={styles.button}>
-      <TouchableOpacity onPress={onClick} style={{ flex: 1 }}>
+    <TouchableOpacity onPress={onClick} style={styles.button}>
+      <View>
         <Text>{children}</Text>
-      </TouchableOpacity>
-    </View>
+      </View>
+    </TouchableOpacity>
   )
 }

@@ -8,6 +8,7 @@ import { Button } from './Button'
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   }
@@ -23,7 +24,9 @@ export const Counters = (props: CountersProps) => {
 
   return (
     <View style={styles.container}>
-      {children}
+      <View>
+        {children}
+      </View>
       <Button onClick={addFn}>Add New Counter</Button>
     </View>
   )
