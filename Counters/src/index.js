@@ -1,9 +1,9 @@
+// @flow
+
 import React from 'react'
-import { Component } from 'react-native';
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'
 
 import { app } from './modules'
-
 import createStore from './createStore'
 
 const store = createStore()

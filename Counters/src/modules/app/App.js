@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 })
 
 const renderCounters = (counters, decrement, increment, incrementWithDelay) => {
-  return Object.keys(counters).map((id) => {
+  return Object.keys(counters).map(id => {
     const value = counters[id]
     return (
       <Counter
@@ -28,14 +28,8 @@ const renderCounters = (counters, decrement, increment, incrementWithDelay) => {
   })
 }
 
-const App = (props) => {
-  const {
-    addNewCounter,
-    counters,
-    decrement,
-    increment,
-    incrementWithDelay
-  } = props
+const App = props => {
+  const { addNewCounter, counters, decrement, increment, incrementWithDelay } = props
 
   return (
     <View style={styles.container}>
@@ -65,13 +59,13 @@ App.propTypes = {
 //decrement functions wrapped with dispatch. I think this is the best and cleanest
 //way to seperate your connect and your pure function.
 export default connect(
-  (state) => ({
+  state => ({
     counters: state.app.counters
   }),
-  (dispatch) => ({
+  dispatch => ({
     addNewCounter: () => dispatch(actions.newCounter()),
-    increment: (id) => dispatch(actions.increment(id)),
-    decrement: (id) => dispatch(actions.decrement(id)),
-    incrementWithDelay: (id) => dispatch(actions.incrementWithDelay(id))
+    increment: id => dispatch(actions.increment(id)),
+    decrement: id => dispatch(actions.decrement(id)),
+    incrementWithDelay: id => dispatch(actions.incrementWithDelay(id))
   })
 )(App)
